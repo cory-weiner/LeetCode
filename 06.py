@@ -1,6 +1,8 @@
 # ZigZag Conversion
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
+        if numRows == 1:
+            return s
         result = [[] for _ in range(numRows)]
         r_multiplier = 1
         currrent_r = 0
@@ -15,4 +17,4 @@ class Solution:
         return ''.join( [''.join(substr) for substr in result])
 
         
-print(Solution().convert('PAYPALISHIRING',3))
+print(Solution().convert('AB',1))
